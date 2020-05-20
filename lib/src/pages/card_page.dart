@@ -17,6 +17,9 @@ class CardPage extends StatelessWidget {
   }
 
   Widget _cardTipo1() => Card(
+        elevation: 10.0,
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
         child: Column(
           children: <Widget>[
             ListTile(
@@ -44,22 +47,43 @@ class CardPage extends StatelessWidget {
           ],
         ),
       );
-  Widget _cardTipo2() => Card(
-        child: Column(
-          children: <Widget>[
-            FadeInImage(
-              image: NetworkImage('https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg'),
-              placeholder: AssetImage('assets/original.gif'),
-              fadeInDuration: Duration(milliseconds: 200),
-              height: 300.0,
-              fit: BoxFit.cover,
-              ),
-            // Image(
-            //   image: NetworkImage(
-            //       'https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg'),
-            // ),
-            Text("Aca va un texto que acompa;a a la imagen de fade in")
-          ],
+
+  Widget _cardTipo2() => Container(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                FadeInImage(
+                  image: NetworkImage(
+                      'https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg'),
+                  placeholder: AssetImage('assets/original.gif'),
+                  fadeInDuration: Duration(milliseconds: 200),
+                  height: 310.0,
+                  fit: BoxFit.cover,
+                ),
+                // Image(
+                //   image: NetworkImage(
+                //       'https://www.yourtrainingedge.com/wp-content/uploads/2019/05/background-calm-clouds-747964.jpg'),
+                // ),
+                Padding(padding: EdgeInsets.only(top: 6.0)),
+                Text("Aca va un texto que acompa;a a la imagen de fade in")
+              ],
+            ),
+          ),
         ),
+        padding: EdgeInsets.only(left: 0.0, right: 0.0, top: 0.0, bottom: 13.0),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20.0),
+            color:Colors.white,
+            boxShadow: <BoxShadow> [
+              BoxShadow(
+                color: Colors.black26,
+                blurRadius: 15.0,
+                spreadRadius: 3.0,
+                offset: Offset(2.0, 15.0)
+              )
+            ],
+            ),
       );
 }

@@ -8,6 +8,10 @@ class AlertPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('alert page'),),
+        body: Center(
+          child: RaisedButton(
+            child: Text('Monstrar alerta'),
+            onPressed: null),),
     );
   }
 }
