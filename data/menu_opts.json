@@ -20,6 +20,16 @@
             "ruta" : "animated",
             "icon" : "folder_open",
             "texto": "Animated - container"
+        },
+        {
+            "ruta" : "inputs",
+            "icon" : "input",
+            "texto": "Inputs"
+        },
+        {
+            "ruta" : "sliders",
+            "icon" : "tune",
+            "texto": "Sliders"
         }
     ]
 }
